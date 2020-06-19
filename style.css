@@ -7,8 +7,8 @@
 }
 
 body{
-	font-family: montserrat;
-	
+	font-family: "Ubuntu", sans-serif;
+
 }
 
 .container{
@@ -261,8 +261,8 @@ body{
 .img-box{
 	width: 100%;
 	height: 100%;
-    margin: 10.6666666667px;
-    border: 1px solid black;
+    margin: 10.6666666667px 0;
+    /*border: 1px solid black;*/
 }
 
 .img-box img{
@@ -354,4 +354,22 @@ body{
   border-top: 0.1px solid #ffcc99;
   width: 100%;
   height: 0.1px;
+}
+
+.stroy-title{
+	font-size: 12px;
+    font-weight: 400;
+    font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;
+}
+
+.story-title-course{
+	color: #aaa;
+	font-size: 12px;
+   	padding-left: 5px;
+    font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;
+}
+
+.grid-3colums{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
