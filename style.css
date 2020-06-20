@@ -217,7 +217,6 @@ body{
 }
 
 .section-text{
-	
 	font-size: 16px;
 	padding: 5px 0;
 }
@@ -372,4 +371,30 @@ body{
 .grid-3colums{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
 }
+
+.img-box-articles{
+	height: 276px;
+}
+
+.img-box-articles.img1{
+	background: transparent url(images/Untitled-design-80-368x276.png) no-repeat;    
+	/*background-size: 100% 100%;*/
+	
+}
+
+.img-box-articles.img2{
+	background: transparent url(images/header-image-the-nuraphone-headphones-368x276.png) no-repeat;    
+	/*background-size: 100% 100%;*/
+}
+
+.img-box-articles.img3{
+	background: transparent url(images/quantum_generic-368x276.jpg) no-repeat;    
+	/*background-size: 100% 100%;*/
+	
+}
+
+
+
+	
