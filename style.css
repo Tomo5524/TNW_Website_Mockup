@@ -374,27 +374,188 @@ body{
 	grid-gap: 10px;
 }
 
+/*.article-grid{
+
+}
+*/
+
+
 .img-box-articles{
 	height: 276px;
+	position: relative;
+	margin: 5px 0;
+
+}
+
+.img-box-header{
+	bottom: 0;
+    left: 0;
+    padding: 14px;
+    position: absolute;
+    right: 0;
+    z-index: 3;
 }
 
 .img-box-articles.img1{
-	background: transparent url(images/Untitled-design-80-368x276.png) no-repeat;    
-	/*background-size: 100% 100%;*/
-	
+	/*background-image: linear-gradient(170deg, rgba(255, 66, 0, 0.8) 20%, 
+		rgba(0, 0, 0, 0.46451612903225803)80%, 
+		rgba(0, 0, 0, 1) 90% ), 
+		url(images/Hikeland-796x417.jpg);*/
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/Untitled-design-80-368x276.png);    
+
 }
 
 .img-box-articles.img2{
-	background: transparent url(images/header-image-the-nuraphone-headphones-368x276.png) no-repeat;    
-	/*background-size: 100% 100%;*/
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/header-image-the-nuraphone-headphones-368x276.png);    
 }
 
 .img-box-articles.img3{
-	background: transparent url(images/quantum_generic-368x276.jpg) no-repeat;    
-	/*background-size: 100% 100%;*/
-	
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/quantum_generic-368x276.jpg);
+}
+
+.img-box-articles.img4{
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/Untitled-design-1-368x276.jpg);
+}
+
+.img-box-articles.img5{
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/random-institute-GkacI-_mGlg-unsplash-3-368x276.jpg);
+}
+
+.img-box-articles.img6{
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/spotdash4-368x276.png);
+}
+
+.img-box-articles.img7{
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/Untitled-design-1-368x276.jpg);
+}
+
+.img-box-articles.img8{
+	background-image: linear-gradient(176deg, rgba(255,0,0,0) 0%, 
+		rgba(0,0,0,0.46451612903225803) 49%, 
+		rgba(0,0,0,1) 86%), 
+		url(images/Untitled-design-1-368x276.jpg);
 }
 
 
+.article-header{
+	font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;
+	color: #fff;
+    font-size: 13px;
+    padding-bottom: 4px;
+}
+
+.article-description{
+	color: #fff;
+	margin-bottom: 6px;
+	font-size: 20px;
+}
+
+.latest-header{
+	display: flex;
+	height: 96px;
+}
+
+.latest-header img{
+	height: 100%;
+	max-width: 128px;
+}
+
+.header-text-box{
+	padding: 10px 14px 0;
+	background-color: rgba(255,68,34,.06);
 
 	
+}
+
+.header-text-box h4{
+	font-size: 15px;
+	color: #f42;
+    font-weight: 700;
+    line-height: 1.25;
+
+}
+
+.header-text-box h5{
+	color: #f42;
+	font-size: 12px;
+	font-family: Shentox,sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    line-height: 1.5;
+	padding: 0;
+}
+
+.section-headline-flex{
+	display: flex;
+	flex-direction: column;
+	padding: 5px 0;
+}
+
+.section-headline-flex li{
+	border-bottom: 1px solid #eee;
+}
+
+.bullets{
+	color: #f42; /* Change the color */
+	padding-left: 5px;
+	position: relative;
+	top: 7px;
+
+}
+
+.section-headline-title{
+
+	color: #555555;
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 2px;
+    padding: 6px 0 6px 14px;
+}
+
+.article-box{
+	display: flex;
+}
+
+.article-img{
+	background-position: top top;
+	
+}
+
+.article-title-flexbar{
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-text{
+	color:rgb(255, 68, 34);
+	font-family: Avalon, sans-serif;
+    color: rgb(255, 68, 34);
+}
+
+.grid-4colums{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
