@@ -86,7 +86,6 @@ body{
 .cover-header{
 	height: 100%;
 	position: relative;
-
 }
 
 .grid1{
@@ -99,6 +98,25 @@ body{
   	background-size: cover;
 	background-position: cover;
 }
+
+@media (max-width: 1024px) and (min-width: 768px){
+	.nav-logo {
+		
+		background-color: #f42;
+    	background: linear-gradient(to bottom right,#c09,#f42 85%);
+	    /*background: transparent url(images/tnw.svg) no-repeat;
+	    background-size: contain;*/
+	    left: 24px;
+	    max-width: 50%;
+	    height: 100%;
+	    max-height: 112px;
+	    line-height: 1;
+	    top: 24px;
+	    pointer-events: none;
+	    text-align: right;	
+	}
+}
+
 
 .top{
 	height: 50%;
@@ -483,9 +501,7 @@ body{
 
 .header-text-box{
 	padding: 10px 14px 0;
-	background-color: rgba(255,68,34,.06);
-
-	
+	background-color: rgba(255,68,34,.06);	
 }
 
 .header-text-box h4{
@@ -493,7 +509,6 @@ body{
 	color: #f42;
     font-weight: 700;
     line-height: 1.25;
-
 }
 
 .header-text-box h5{
@@ -555,7 +570,201 @@ body{
     color: rgb(255, 68, 34);
 }
 
+.deals-grid{
+	padding-bottom: 12px
+}
+
 .grid-4colums{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 15px;
+	margin-bottom: 4em
+}
+
+.deals-img{
+	height: 200px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.deals-img.deal1{
+	background-image: url(images/sale_28210_primary_image.jpg);
+}
+
+.deals-img.deal2{
+	background-image: url(images/sale_29165_primary_image.jpg);
+}
+
+.deals-img.deal3{
+	background-image: url(images/sale_28695_primary_image.jpg);
+}
+
+.deals-img.deal4{
+	background-image: url(images/sale_19040_primary_image.jpg);
+}
+
+.deals-img.deal5{
+	background-image: url(images/sale_29047_primary_image.jpg);
+}
+.deals-img.deal6{
+	background-image: url(images/product_30218_product_shots1.jpg);
+}
+.deals-img.deal7{
+	background-image: url(images/sale_29049_primary_image.jpg);
+}
+.deals-img.deal8{
+	background-image: url(images/sale_14523_primary_image.jpg);
+}
+
+.discount-tag{
+	background-image: url(images/deals-ribbon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    z-index: 10;
+}
+
+.discount-percent{
+	transform: rotate(45deg);
+    font-size: 14px;
+    font-weight: 700;
+    left: 8px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: 20px;
+    width: 100%;
+}
+
+
+.deal-text{
+	font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.cost span{
+	font-size: 13px;
+	color: #AAAAAA;
+	/*how to cross out word*/
+	text-decoration: line-through;
+	padding-right: 5px;
+}
+
+.footer{
+	transition: transform .5s ease,-webkit-transform .5s ease;
+    position: relative;
+    will-change: transform;
+    z-index: 4;
+    text-align: center;
+}
+
+.footer-links{
+	background: #131313;
+	/*height: 91px;*/
+	padding: 3em 0 2em;
+
+}
+
+.links{
+	margin-bottom: 1.5em;
+}
+
+.links li{
+	display: inline-block;
+	margin: 0 8px;
+}
+
+.link-logo{
+	background: #333;
+    border-radius: 50%;
+    display: block;
+    height: 40px;
+    padding: 12px;
+    text-align: center;
+    width: 40px;
+}
+
+.icon{
+	background: transparent url(images/icons-sprite.svg) no-repeat;
+    height: 16px;
+    width: 18px;
+   	position: relative;
+   
+   	background-size: 1296px 1296px;
+   /* font-size: 14px;
+    background-size: 14px;*/
+	/*background: transparent url(images/icons-sprite.svg) no-repeat;
+    background-position: -272px -272px;
+    background-size: 1296px 1296px;
+    height: 16px;
+    width: 16px; */
+}
+
+.icon-facebook{
+    background-position: -272px -272px;
+}
+
+.icon-twitter{
+	background-position: -1024px -1024px;
+}
+
+.icon-youtube{
+	background-position: -1280px -1280px;
+}
+
+.icon-instagram{
+	background-position: -416px -416px;
+}
+
+.icon-pinterest{
+	background-position: -672px -672px;
+}
+
+.icon-srsfeed{
+	background-position: -816px -816px;
+}
+
+.icon-mail{
+	background-position: -576px -576px;
+}
+
+.footer-links-menu{
+	color: #AAAAAA;
+}
+
+.footer-links-menu li{
+	display: inline-block;
+	margin: 0 6px;
+	font-family: Shentox,sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.footer-legal{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #AAAAAA;
+	background-color: #000000;
+    line-height: 1.5;
+    height: 94px;
+}
+
+.red-heart{
+	color: red;
 }
