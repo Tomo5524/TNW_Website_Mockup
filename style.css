@@ -15,41 +15,54 @@ body{
 	margin-bottom: 100px;
 }
 
-.nav{
-	background-color: black;
-}
-
-
-.flex-nav{
-	display: flex;
-	justify-content: space-between;
-}
-
-.nav2{
-	background: white;
-	line-height: 30px;
-
-}
-
-.left, .right{
-	width: 50%;
+.nav {
 	font-family: Shentox, sans-serif;
 	color: #AAAAAA;
 	font-size: 14px;	
 }
 
-.left ul, .right ul{
+.nav.start{
+	background: #131313;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 32px;
+    position: relative;
+    width: 100%;
+}
+
+.nav li{
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.nav.start ul{
+	float: left;
+}
+
+.nav-company{
+	float: right;
+}
+
+.nav.bottom{
+	background-color: white;
+    line-height: 25px;
+    display: inline-block;
+    width: 100%;
+    height: 42px;
+}
+
+.nav.bottom li{
+	float: left;
+}
+
+.nav.bottom-right{
+	float: right;
+}
+
+.no-show-media{
 	display: flex;
-	/*padding: 10px 20px;*/
-}
 
-.right ul{
-	justify-content: flex-end;
-}
-
-.left li, .right li{
-	
-	padding: 10px 20px;
 }
 
 #itembox{
@@ -69,7 +82,7 @@ body{
 	background-color: #FFE800;
 }
 
-.grid{
+.cover-grid{
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-gap: 10px;
@@ -99,21 +112,76 @@ body{
 	background-position: cover;
 }
 
+.nav-logo{
+	background-color: #f42;
+    background: linear-gradient(to bottom right,#c09,#f42 85%);
+    display: none;
+}
+
 @media (max-width: 1024px) and (min-width: 768px){
 	.nav-logo {
-		
-		background-color: #f42;
-    	background: linear-gradient(to bottom right,#c09,#f42 85%);
-	    /*background: transparent url(images/tnw.svg) no-repeat;
-	    background-size: contain;*/
-	    left: 24px;
-	    max-width: 50%;
+		display: inline-block; 	
+	    /*max-width: 50%;
 	    height: 100%;
-	    max-height: 112px;
+	    height: 112px;*/
+	    height: 80px;
+	    width: 106px;
 	    line-height: 1;
-	    top: 24px;
 	    pointer-events: none;
-	    text-align: right;	
+	    text-align: right;
+	    position: absolute;
+	    height: 80px;
+	    width: 106px;
+	}
+	.nav-logo img{
+		position: relative;
+		height: 16px;
+		width: 66px;
+		top: 30px;
+    	right: 20px;
+	}
+
+	.nav.start{
+		position: relative;
+	    left: 106px;
+	    width: calc(100% - 106px);
+
+	}
+
+	.nav.bottom{
+		position: relative;
+	    left: 106px;
+	    width: calc(100% - 106px);
+	}
+
+	.grid1{
+		background: linear-gradient( 176deg, 
+			rgba(255, 0, 0, 0) 0%, 
+			rgba(0, 0, 0, 0.46451612903225803) 49%, 
+			rgba(0, 0, 0, 1) 86% ),
+			url(images/Hikeland-796x417.jpg);
+	}
+	/*get rid of logo*/
+	#big-logo{
+		display: none;
+	}
+
+	#date{
+		display: none;
+	}
+
+	.no-show-media{
+		display: none;
+	}
+}
+
+@media (max-width: 767px){
+	.cover-grid {
+		height: 100vh;
+		
+		grid-template-rows: repeat(1, 3fr);
+	    /*min-height: 30vh;
+	    position: relative;*/
 	}
 }
 
