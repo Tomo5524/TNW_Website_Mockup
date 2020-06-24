@@ -10,10 +10,10 @@ body{
 	font-family: "Ubuntu", sans-serif;
 
 }
-
+/*
 .container{
 	margin-bottom: 100px;
-}
+}*/
 
 .nav {
 	font-family: Shentox, sans-serif;
@@ -65,6 +65,11 @@ body{
 
 }
 
+#menuicon{
+	display: none;
+	/*color: #ff4422;*/
+}
+
 #itembox{
 	position: relative;
 	bottom: 2px;
@@ -82,28 +87,39 @@ body{
 	background-color: #FFE800;
 }
 
+
+/*-------     main article     -----------*/
+
 .cover-grid{
-	display: grid;
+	margin-left: 4px;
+    margin-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    height: 75vh;
+    color: white;
+	/*background: rgba(0,0,0,.25) url(images/image-gradient.png) no-repeat;*/
+	/*display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-gap: 10px;
+	grid-gap: 10px;*/
+	/*margin-bottom: 100px;
 	min-height: 550px;
-	color: white;
-	background: rgba(0,0,0,.25) url(images/image-gradient.png) no-repeat;
-
+	*/
 }
 
-.flex{
-	display: flex;
-}
 
-.cover-header{
+.cover-story.article1{
 	height: 100%;
-	position: relative;
+    width: 66.66666%;
+    display: block;
+    float: left;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+
 }
 
-.grid1{
-	display: flex;
-	flex-direction: column;
+.article-grid1{
+	height: 100%;
 	background-image: linear-gradient(170deg, rgba(255, 66, 0, 0.8) 20%, 
 		rgba(0, 0, 0, 0.46451612903225803)80%, 
 		rgba(0, 0, 0, 1) 90% ), 
@@ -112,13 +128,73 @@ body{
 	background-position: cover;
 }
 
+.article-grid-right{
+	float: left;
+    display: block;
+    height: 50%;
+    width: 33.33333%;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    /*postion relative is the key to posioning this to the right*/
+    position: relative;
+}
+
+.article-grid2{
+	background-color: rgba(0,0,0,.25);
+	background-image: linear-gradient(176deg, 
+		rgba(255, 0, 0, 0) 0%, 
+		rgba(0, 0, 0, 0.46451612903225803) 49%, 
+		rgba(0, 0, 0, 1) 86% ),url(images/image-gradient.png), url(images/cc_series_empty-1200x628.jpg);
+	background-size: cover;
+	background-position: cover,cover;
+	background-repeat: no-repeat, no-repeat;
+	bottom: 4px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.article-grid3{
+	background-image: linear-gradient(176deg, 
+		rgba(255, 0, 0, 0) 0%, 
+		rgba(0, 0, 0, 0.46451612903225803) 49%, 
+		rgba(0, 0, 0, 1) 86% ), url(images/1-18-796x417.jpg);
+	bottom: 4px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+
+.flex{
+	display: flex;
+}
+
+.cover-header{
+	position: absolute;
+    padding: 20px 16px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+}
+
+
+
 .nav-logo{
 	background-color: #f42;
     background: linear-gradient(to bottom right,#c09,#f42 85%);
     display: none;
 }
 
-@media (max-width: 1024px) and (min-width: 768px){
+@media (max-width: 1024px){
+
+	.cover-grid{
+		height: 50vh;
+	}
+
 	.nav-logo {
 		display: inline-block; 	
 	    /*max-width: 50%;
@@ -154,13 +230,31 @@ body{
 	    width: calc(100% - 106px);
 	}
 
-	.grid1{
+	.article-grid1{
 		background: linear-gradient( 176deg, 
 			rgba(255, 0, 0, 0) 0%, 
 			rgba(0, 0, 0, 0.46451612903225803) 49%, 
 			rgba(0, 0, 0, 1) 86% ),
 			url(images/Hikeland-796x417.jpg);
 	}
+
+	.text-bottom h3{
+		font-size: 20px;
+	}
+
+	h2.big-text{
+		font-size: 20px;
+	}	
+
+	p.small-text{
+		padding: 0;
+	}
+
+	.small-text{
+		font-size: 12px;
+		padding: 0;
+	}
+
 	/*get rid of logo*/
 	#big-logo{
 		display: none;
@@ -173,16 +267,239 @@ body{
 	.no-show-media{
 		display: none;
 	}
+
+	/*latest news*/
+	
+	.section-grid.two-rows {
+	    display: grid;
+	    grid-template-columns: repeat(3, 1fr);
+	    grid-gap: 10px;
+	    margin-bottom: 100px;
+	}
+
+	.section-grid.funding-rounds-section{
+		display: grid;
+	    grid-template-columns: repeat(3, 1fr);
+	}
+
+	/*Latest funding rounds on Index.co*/
+
+	header.flex-section{
+		display: block;
+		margin-bottom: 24px;
+	}
+
+	.box4{
+		display: none;
+	}
+
+	/*articles*/
+	.grid-3colums.media-size{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/*lateset deals*/
+	.grid-4colums.deals-media{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
 }
 
-@media (max-width: 767px){
+@media (max-width: 834px){
 	.cover-grid {
 		height: 100vh;
-		
-		grid-template-rows: repeat(1, 3fr);
-	    /*min-height: 30vh;
-	    position: relative;*/
 	}
+
+	.cover-story.article1{
+		height: 33.33%;
+	    width: 100%;
+	    padding: 4px;
+	}
+
+	.article-grid-right{
+		height: 33.33%;
+	    width: 100%;
+	    padding: 4px;
+	}
+
+	.big-text{
+		font-size: 20px;
+	}
+
+	.nav-logo {
+		display: inline-block; 	
+	    /*max-width: 50%;
+	    height: 100%;
+	    height: 112px;*/
+	    line-height: 1;
+	    pointer-events: none;
+	    text-align: right;
+	    position: absolute;
+	    height: 48px;
+	    width: 106px;
+	}
+	.nav-logo img{
+		position: relative;
+		height: 16px;
+		width: 66px;
+		top: 15px;
+    	right: 20px;
+	}
+
+	.list-box{
+		border-left: 1px solid rgb(238, 238, 238);
+	}
+	
+	#menuicon{
+		display: block;
+		color: #ff4422;
+	}
+
+	/*media items are less important in priority*/
+	h2.big-text{
+		font-size: 20px;
+	}	
+
+	p.small-text{
+		padding: 0;
+	}
+
+	/*get rid of logo*/
+	#big-logo{
+		display: none;
+	}
+
+	#date{
+		display: none;
+	}
+
+	.no-show-media{
+		display: none;
+	}
+	.nav.start{
+		display: none;
+	}
+	.nav-bottom-menu{
+		display: none;
+	}
+
+	/*latest news*/
+	.section-grid.two-rows {
+	    display: block;
+	    position: relative;
+
+	}
+
+	.grid-box{
+		min-height: 85px;
+	    padding-left: 88px;
+	    position: relative;
+	    margin-bottom: 8px;
+	}
+
+	.lastest-section-img.small-media{
+		left: 0;
+	    /*padding-top: 75px;*/
+	    position: absolute;
+	    /*top: 0;*/
+	    width: 75px;
+	    height: 84px;
+	    margin-bottom: 8px;
+	   
+		image-rendering: crisp-edges; 
+		
+	}
+
+	h5.section-text{
+		font-size: 14px;
+		padding: 5px 0;
+	}	
+
+	p.section-small-text{
+		color: #AAAAAA;
+		font-size: 12px;
+		word-spacing: 2px;
+	}
+
+	/*Latest funding rounds on Index.co*/
+	ul.flex-section-header-nav{
+		display: block;
+	}
+
+	.flex-section-header-nav li{
+		margin-top: 11px;
+	}
+
+	.border{
+		display: none;
+	}
+
+	.section-grid.funding-rounds-section{
+		display: block;
+	}
+
+	.grid-3colums.media-size{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.img-box-articles{
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.grid-4colums.deals-media{
+		display: block;
+		position: relative;
+	}
+
+	.deals-grid{
+		min-height: 85px;
+	    padding-left: 88px;
+	    position: relative;
+	    margin-bottom: 8px;
+	}
+
+	div.deals-img{
+		left: 0;
+	    /* padding-top: 75px; */
+	    position: absolute;
+	    /* top: 0; */
+	    width: 75px;
+	    height: 84px;
+	    margin-bottom: 8px;
+	}
+
+	div.discount-tag{
+		display: none;
+	}
+
+	p.deal-text{
+		padding: 0;
+	}
+
+	/*footer*/
+	ul.links li{
+		margin: 0 3px;
+	}
+
+	ul.footer-links-menu li{
+		margin: 0 4px;
+	}
+
+	div.footer-legal{
+		display: block;
+    	padding: 15px 0;
+}
+	}
+
+	.footer-legal span.text{
+    	display: block;
+    	font-size:13px;
+    }
+
 }
 
 
@@ -202,12 +519,7 @@ body{
 
 
 
-.grid2{
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 10px;
-	
-}
+
 
 
 /*images for grid*/
@@ -218,23 +530,6 @@ body{
 	margin-top: 10px;
 }
 
-.gridchild1{
-	background-color: rgba(0,0,0,.25);
-	background-image: linear-gradient(176deg, 
-		rgba(255, 0, 0, 0) 0%, 
-		rgba(0, 0, 0, 0.46451612903225803) 49%, 
-		rgba(0, 0, 0, 1) 86% ),url(images/image-gradient.png), url(images/cc_series_empty-1200x628.jpg);
-	background-size: cover;
-	background-position: cover,cover;
-	background-repeat: no-repeat, no-repeat;
-}
-
-.gridchild2{
-	background-image: linear-gradient(176deg, 
-		rgba(255, 0, 0, 0) 0%, 
-		rgba(0, 0, 0, 0.46451612903225803) 49%, 
-		rgba(0, 0, 0, 1) 86% ), url(images/1-18-796x417.jpg);
-}
 
 #date{
 	font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;
@@ -285,15 +580,16 @@ body{
 	margin-bottom: 100px;
 }
 
-.section-grid.two-rows{
+/*.section-grid.two-rows{
 	grid-template-rows: 1fr 1fr;
-}
+}*/
 
 .grid-box{
 	width: 100%;
 }
 
-.section-grid img{
+
+.lastest-section-img{
 	width: 100%;
 }
 
@@ -460,16 +756,15 @@ body{
 	grid-gap: 10px;
 }
 
-/*.article-grid{
 
-}
-*/
 
 
 .img-box-articles{
 	height: 276px;
 	position: relative;
 	margin: 5px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 
@@ -569,7 +864,8 @@ body{
 
 .header-text-box{
 	padding: 10px 14px 0;
-	background-color: rgba(255,68,34,.06);	
+	background-color: rgba(255,68,34,.06);
+	width: 100%
 }
 
 .header-text-box h4{
